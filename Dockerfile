@@ -5,6 +5,6 @@ WORKDIR /etc/rabbitmq/ssl
 
 # Copy the CA certificate content from the environment variable into a file
 # RUN echo $CA_CERTIFICATE > ca_certificate.pem
-ENV ay="Hello World"
+
 #CMD echo $CA_CERTIFICATE
-CMD ["sh", "-c", "echo $ay"]
+CMD ["sh", "-c", "echo $TEST"]
