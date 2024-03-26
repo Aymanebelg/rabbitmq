@@ -18,5 +18,5 @@ jobs:
 
       - name: Build and run Docker Compose
         run: |
-         cd ~/last_test/rabbitmq
-         docker-compose up -d
+          docker-compose up -d
+        working-directory: ./
