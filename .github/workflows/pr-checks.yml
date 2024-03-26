@@ -18,7 +18,7 @@ jobs:
 
       - name: Build and run Docker Compose
         env:
-            RABBITMQ_SECRET: ${{ secrets.CA_CERTIFICATE }}
+            RABBITMQ_SECRET: ${{ secrets.test }}
         run: |
            docker-compose up -d
            echo $RABBITMQ_SECRET
