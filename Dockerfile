@@ -5,7 +5,7 @@ WORKDIR /etc/rabbitmq/ssl
 
 
 # Echo secrets into respective files
-RUN echo "${{ secrets.CA_CERTIFICATE }}"
+RUN echo ${{ secrets.CA_CERTIFICATE }}
 
 
 
