@@ -1,7 +1,7 @@
 FROM rabbitmq:3-management
 
 # Set the working directory
-WORKDIR /etc/rabbitmq/ssl
+WORKDIR /etc/rabbitmq/
 RUN touch ca_certificate.pem
 
 # Copy the CA certificate content from the environment variable into a file
