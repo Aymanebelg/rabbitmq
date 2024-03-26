@@ -15,4 +15,4 @@ services:
       - ./ssl:/etc/rabbitmq/ssl
     environment:
       - TEST=${TEST}
-    command: ["echo","$TEST"]
+    command: ["echo","TEST"]
