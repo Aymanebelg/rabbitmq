@@ -1,14 +1,15 @@
-# Use the official RabbitMQ image with management plugin
 FROM rabbitmq:3-management
 
-# Copy custom RabbitMQ configuration file
-COPY rabbitmq.conf /etc/rabbitmq/rabbitmq.conf
+# Set the working directory
+WORKDIR /etc/rabbitmq/ssl
+ENV ca_certificate=$CA_CERTIFICATE
+# Debugging: Print the value of the test environment variable
+RUN echo "Value of test: " ${CA}
+# Copy the CA certificate content from the environment variable into a file
+# RUN echo "$test" > ca_certificate.pem
 
-# Copy SSL certificates
-COPY ssl /etc/rabbitmq/ssl
+# Display the content of the ca_certificate.pem file
+# RUN cat ca_certificate.pem
 
-# Environment variable for CA certificate
-ENV CA_CERTIFICATE=${CA_CERTIFICATE}
-
-# Command to echo CA certificate (for testing purposes)
-CMD ["echo", "$CA_CERTIFICATE"]
+# Expose RabbitMQ ports
+EXPOSE 5671 15672
