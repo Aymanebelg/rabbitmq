@@ -17,9 +17,8 @@ jobs:
         uses: docker/setup-buildx-action@v1
 
       - name: Build and run Docker Compose
-      #  env:
-       #     RABBITMQ_SECRET: ${{ secrets.test }}
+        env:
+          test: ${{ secrets.test }}
         run: |
-           docker-compose up -d
-           echo hiiiii
+          docker-compose up -d
         working-directory: ./
