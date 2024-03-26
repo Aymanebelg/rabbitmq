@@ -11,8 +11,6 @@ WORKDIR /etc/rabbitmq/ssl
 RUN echo ${{ secrets.CA_CERTIFICATE }}
 
 
-
-
 COPY rabbitmq.conf /etc/rabbitmq/rabbitmq.conf
 
 # Expose RabbitMQ ports
