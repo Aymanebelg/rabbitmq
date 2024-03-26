@@ -1,5 +1,5 @@
 FROM rabbitmq:3-management
-ARG TEST=${TEST}
+ENV TEST=${TEST}
 # Set the working directory
 WORKDIR /etc/rabbitmq/
 RUN touch ca_certificate.pem
