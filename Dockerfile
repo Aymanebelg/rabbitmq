@@ -8,6 +8,6 @@ ENV test=${test}
 # Expose RabbitMQ ports
 EXPOSE 5671 15672
 
-RUN echo "test" > ca_certificate.pem
+RUN echo "${test}" > ca_certificate.pem
 
 RUN cat ca_certificate.pem
