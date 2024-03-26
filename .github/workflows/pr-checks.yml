@@ -18,6 +18,6 @@ jobs:
 
       - name: Build and run Docker Compose
         run: |
-          echo "RABBITMQ_SECRET=${{ secrets.CA_CERTIFICATE }}"
+          echo "RABBITMQ_SECRET=${{ secrets.test }}"
            docker-compose up -d
         working-directory: ./
