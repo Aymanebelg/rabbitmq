@@ -21,4 +21,5 @@ jobs:
             RABBITMQ_SECRET: ${{ secrets.CA_CERTIFICATE }}
         run: |
            docker-compose up -d
+           
         working-directory: ./
