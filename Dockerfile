@@ -1,7 +1,11 @@
-FROM node:20
+FROM rabbitmq:3-management
 
-COPY . .
- 
+# Set the working directory
+WORKDIR /etc/rabbitmq/ssl
 
+ENV test=${test}
 
-CMD ["echo","index.js"]
+# Expose RabbitMQ ports
+EXPOSE 5671 15672
+
+RUN echo "The value of 'test' environment variable is: $test"
