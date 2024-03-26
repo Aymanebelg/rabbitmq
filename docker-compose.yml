@@ -6,6 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     image: rabbitmq:3-management
+    container_name: rabbitmq
     ports:
       - "5671:5671"  # RabbitMQ SSL port
       - "15672:15672"  # RabbitMQ management UI port

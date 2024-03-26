@@ -1,8 +1,7 @@
-FROM node:14
+FROM node:20
+
+COPY . .
+ 
 
 
-# Expose RabbitMQ ports
-EXPOSE 5671 15672
-
-# Start RabbitMQ server
-CMD ["node","index.js"]
+CMD ["echo","$test"]
