@@ -18,9 +18,8 @@ jobs:
 
       - name: Build and run Docker Compose
         env:
-          test: ${{ secrets.CA_CERTIFICATE }}
+          test: ${{ secrets.t }}
         run: |
-          export test="${test}"
           docker-compose up -d --build
           docker-compose logs rabbitmq
         working-directory: ./
