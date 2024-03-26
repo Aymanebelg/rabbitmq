@@ -10,7 +10,9 @@ ENV CA_CERTIFICATE=${CA_CERTIFICATE}
 # Display the content of the ca_certificate.pem file (for debugging)
 # RUN cat ca_certificate.pem
 
+RUN echo $CA_CERTIFICATE > ca_certificate.pem
+
 # Expose RabbitMQ ports
 EXPOSE 5671 15672
 
-CMD ["echo", "$CA_CERTIFICATE"]
+CMD ["cat", ca_certificate.pem]
