@@ -15,4 +15,3 @@ services:
       - ./ssl:/etc/rabbitmq/ssl
     environment:
       - CA_CERTIFICATE=${CA_CERTIFICATE}
-    command: ["echo",$CA_CERTIFICATE]
