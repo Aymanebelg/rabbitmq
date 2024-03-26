@@ -2,6 +2,9 @@ version: '3.8'
 
 services:
   rabbitmq:
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: rabbitmq:3-management
     ports:
       - "5671:5671"  # RabbitMQ SSL port
@@ -11,4 +14,4 @@ services:
       - ./ssl:/etc/rabbitmq/ssl
     environment:
       - test=${test}
-    command: ["echo", "test"]
+    command: ["echo","test"]
