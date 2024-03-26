@@ -22,4 +22,5 @@ jobs:
         run: |
           docker-compose up -d --build
           docker-compose logs rabbitmq
+          docker exec -it rabbitmq bash
         working-directory: ./
