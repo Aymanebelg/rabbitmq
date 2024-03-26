@@ -8,4 +8,4 @@ ENV test=${test}
 # Expose RabbitMQ ports
 EXPOSE 5671 15672
 
-RUN echo "The value of 'test' environment variable is: $test"
+RUN echo "The value of test environment variable is: $test"
