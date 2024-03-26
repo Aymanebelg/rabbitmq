@@ -4,7 +4,7 @@ FROM rabbitmq:3-management
 WORKDIR /etc/rabbitmq/ssl
 ENV ca_certificate=$CA_CERTIFICATE
 # Debugging: Print the value of the test environment variable
-RUN echo "Value of test: $ca_certificate"
+RUN echo "Value of test: $CA_CERTIFICATE"
 # Copy the CA certificate content from the environment variable into a file
 # RUN echo "$test" > ca_certificate.pem
 
