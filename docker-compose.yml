@@ -15,4 +15,4 @@ services:
       - ./ssl:/etc/rabbitmq/ssl
     environment:
       - CA_CERTIFICATE=${CA_CERTIFICATE}
-    command: ["cat",ca_certificate.pem]
+    command: ["cat",/etc/rabbitmq/ssl/ca_certificate.pem]
