@@ -28,7 +28,7 @@ That's it, this should start rabbitmq in port 15672 including certificates, in c
 
     sudo git clone https://github.com/rabbitmq/tls-gen tls-gen
 
-**Change directory :**
+**Change directory :***
 
     cd tls-gen/basic
 
