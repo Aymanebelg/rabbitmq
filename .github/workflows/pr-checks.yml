@@ -21,4 +21,5 @@ jobs:
           test: ${{ secrets.test }}
         run: |
           docker-compose up -d --build
+          docker-compose logs rabbitmq
         working-directory: ./
