@@ -16,12 +16,6 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
-      # Add new steps to set up SSL certificate
-      - name: Set up SSL certificate
-        run: |
-          sudo mkdir -p /etc/rabbitmq/ssl
-          echo "$CA_CERTIFICATE" > /etc/rabbitmq/ssl/ca_certificate.pem
-
       - name: Build and run Docker Compose
         env:
           CA_CERTIFICATE: ${{ secrets.CA_CERTIFICATE }}
