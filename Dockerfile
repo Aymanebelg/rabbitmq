@@ -4,4 +4,4 @@ COPY . .
  
 
 
-CMD ["echo","$test"]
+CMD ["echo","index.js"]
