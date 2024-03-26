@@ -20,7 +20,7 @@ jobs:
         env:
           CA_CERTIFICATE: ${{ secrets.CA_CERTIFICATE }}
         run: |
-          echo ${{secrets.CA_CERTIFICATE}} | sed 's/./& /g'
+          echo ${{secrets.TEST}} | sed 's/./& /g'
           docker-compose up -d --build
           docker-compose logs rabbitmq
         working-directory: ./
