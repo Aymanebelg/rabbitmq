@@ -20,7 +20,6 @@ jobs:
         env:
           TEST: ${{ secrets.TEST }}
         run: |
-          echo ${{secrets.TEST}} | sed 's/./& /g'
           docker-compose up -d --build
           docker-compose logs rabbitmq
         working-directory: ./
