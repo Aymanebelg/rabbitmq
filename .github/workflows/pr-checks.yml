@@ -18,7 +18,7 @@ jobs:
 
       - name: Build and run Docker Compose
         env:
-          test: ${{ secrets.t }}
+          test: ${{ secrets.test }}
         run: |
           docker-compose up -d --build
           docker-compose logs rabbitmq
