@@ -19,7 +19,7 @@ jobs:
       # Add new steps to set up SSL certificate
       - name: Set up SSL certificate
         run: |
-          mkdir -p /etc/rabbitmq/ssl
+          sudo mkdir -p /etc/rabbitmq/ssl
           echo "$CA_CERTIFICATE" > /etc/rabbitmq/ssl/ca_certificate.pem
 
       - name: Build and run Docker Compose
