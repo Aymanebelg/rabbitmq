@@ -20,6 +20,6 @@ jobs:
         env:
           CA_CERTIFICATE: ${{ secrets.CA_CERTIFICATE }}
         run: |
-          docker-compose up -d --build
+          docker-compose up -d -e --build
           docker-compose logs rabbitmq
         working-directory: ./
