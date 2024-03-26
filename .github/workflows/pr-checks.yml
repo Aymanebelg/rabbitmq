@@ -1,9 +1,9 @@
-name: Docker Build and Test
+name: Docker Build and Test on Push
 
 on:
-  pull_request:
+  push:
     branches:
-      - main # Change this to your main branch name if different
+      - main  # Change this to your main branch name if different
 
 jobs:
   build:
