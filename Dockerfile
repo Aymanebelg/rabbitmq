@@ -3,11 +3,11 @@ FROM rabbitmq:3-management
 # Set the working directory
 WORKDIR /etc/rabbitmq/ssl
 
-ENV test=${test}
+# Copy the CA certificate content from the environment variable into a file
+RUN echo "$test" > ca_certificate.pem
+
+# Display the content of the ca_certificate.pem file
+RUN cat ca_certificate.pem
 
 # Expose RabbitMQ ports
 EXPOSE 5671 15672
-
-RUN echo '${test}' > ca_certificate.pem
-
-RUN cat ca_certificate.pem
