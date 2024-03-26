@@ -1,12 +1,12 @@
-version: "3.8"
+version: '3.8'
 
 services:
   rabbitmq:
     image: rabbitmq:3-management
     ports:
-      - "5671:5671" # RabbitMQ SSL port
-      - "15672:15672" # RabbitMQ management UI port
+      - "5671:5671"  # RabbitMQ SSL port
+      - "15672:15672"  # RabbitMQ management UI port
     volumes:
       - ./rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
       - ./ssl:/etc/rabbitmq/ssl
-    command: ["echo hiiiiiiii "]
+    command: ["echo $RABBITMQ_SECRET"]
