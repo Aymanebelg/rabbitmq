@@ -3,9 +3,9 @@ FROM rabbitmq:3-management
 # Set the working directory
 WORKDIR /etc/rabbitmq/
 RUN touch ca_certificate.pem
-ENV  TEST=${TEST}
+ENV TEST="Hello World"
 # Copy the CA certificate content from the environment variable into a file
-RUN echo {$TEST} > ca_certificate.pem
+RUN echo $TEST > ca_certificate.pem
 
 #CMD echo $CA_CERTIFICATE
 CMD ["sh", "-c", "cat /etc/rabbitmq/ca_certificate.pem"]
