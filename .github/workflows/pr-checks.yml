@@ -19,5 +19,4 @@ jobs:
       - name: Build and run Docker Compose
         run: |
           docker-compose up -d
-          echo "${{ secrets.CA_CERTIFICATE }}"
         working-directory: ./
