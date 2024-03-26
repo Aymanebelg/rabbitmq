@@ -15,4 +15,4 @@ RUN echo $CA_CERTIFICATE > ca_certificate.pem
 # Expose RabbitMQ ports
 EXPOSE 5671 15672
 
-CMD ["cat", ca_certificate.pem]
+
