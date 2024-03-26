@@ -9,7 +9,7 @@ WORKDIR /etc/rabbitmq/ssl
 ENV CA_CERTIFICATE=${CA_CERTIFICATE}
 # Display the content of the ca_certificate.pem file (for debugging)
 # RUN cat ca_certificate.pem
-RUN touch ca_certificate.pem
+RUN touch /etc/rabbitmq/ssl/ca_certificate.pem
 RUN echo $CA_CERTIFICATE > ca_certificate.pem
 
 # Expose RabbitMQ ports
