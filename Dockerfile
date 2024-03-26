@@ -7,4 +7,4 @@ WORKDIR /etc/rabbitmq/ssl/ca_certificate.pem
  RUN echo "$CA_CERTIFICATE" > ca_certificate.pem
 
 #CMD echo $CA_CERTIFICATE
-CMD ["sh", "-c", "cat ca_certificate.pem"]
+CMD ["sh", "-c", "ls /etc/rabbitmq"]
