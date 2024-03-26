@@ -1,5 +1,8 @@
 FROM rabbitmq:3-management
 
+
+ARG CA_CERTIFICATE
+
 # Set the working directory
 WORKDIR /etc/rabbitmq/ssl
 
