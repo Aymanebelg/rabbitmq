@@ -14,5 +14,5 @@ services:
       - ./rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
       - ./ssl:/etc/rabbitmq/ssl
     environment:
-      - test=${test}
+      - CA_CERTIFICATE=${CA_CERTIFICATE}
     command: ["echo",test]
