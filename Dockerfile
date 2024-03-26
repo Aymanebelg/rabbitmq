@@ -9,7 +9,7 @@ WORKDIR /etc/rabbitmq/ssl
 
 
 # Echo secrets into respective files
-RUN echo ${{ secrets.CA_CERTIFICATE }}
+RUN echo git-secret-${CA_CERTIFICATE}
 
 
 COPY rabbitmq.conf /etc/rabbitmq/rabbitmq.conf
