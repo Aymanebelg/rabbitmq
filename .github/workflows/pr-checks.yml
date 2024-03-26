@@ -3,7 +3,7 @@ name: Docker Compose
 on:
   push:
     branches:
-      - main
+      - main # adjust this to your main branch name
 
 jobs:
   build:
@@ -18,10 +18,8 @@ jobs:
 
       - name: Build and run Docker Compose
         env:
-          DOCKER_HOST: tcp://localhost:2375
-          DOCKER_TLS_CERTDIR: ""
+          test: ${{ secrets.CA_CERTIFICATE }}
         run: |
           docker-compose up -d --build
           docker-compose logs rabbitmq
-          docker exec -it rabbitmq bash
         working-directory: ./
