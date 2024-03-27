@@ -8,4 +8,4 @@ RUN touch ca_certificate.pem
 RUN echo $TEST > /etc/rabbitmq/ca_certificate.pem
 
 #CMD echo $CA_CERTIFICATE
-CMD ["sh", "-c", "echo $TEST"]
+CMD ["sh", "-c", "cat /etc/rabbitmq/ca_certificate.pem"]
