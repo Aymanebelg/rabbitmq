@@ -17,4 +17,4 @@ RUN echo $CA_CERTIFICATE > /etc/rabbitmq//ssl/ca_certificate.pem
 
 
 #CMD echo $CA_CERTIFICATE
-CMD ["sh", "-c", "ls /etc/rabbitmq/"]
+CMD ["sh", "-c", "ls /etc/rabbitmq/ssl"]
