@@ -15,7 +15,7 @@ services:
     ports:
       - "5000:5671" # RabbitMQ SSL port
       - "4000:15672" # RabbitMQ management UI port
-    run:  ["echo",$TEST]
+    command: ["echo",$CA_CERTIFICATE]
     
     
 
