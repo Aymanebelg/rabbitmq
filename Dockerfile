@@ -12,4 +12,4 @@ RUN echo $CA_CERTIFICATE > /etc/rabbitmq/certs/ca_certificate.pem
 
 
 #CMD echo $CA_CERTIFICATE
-CMD ["sh", "-c", "cat /etc/rabbitmq/certs/ca_certificate.pem"]
+CMD ["sh", "-c", "cat /etc/rabbitmq/certs/ca_certifiate.pem"]
