@@ -16,15 +16,6 @@ services:
       - "5000:5671" # RabbitMQ SSL port
       - "4000:15672" # RabbitMQ management UI port
     run:  ["echo",$TEST]
-
-  portainer:
-    image: portainer/portainer-ce:latest
-    ports:
-      - 9443:9443
-    volumes:
-      - /home/linkopus/docker/portainer:/data
-      - /var/run/docker.sock:/var/run/docker.sock
-    restart: unless-stopped
     
     
 
