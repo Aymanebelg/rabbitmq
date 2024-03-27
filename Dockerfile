@@ -4,6 +4,8 @@ FROM rabbitmq:3-management
 WORKDIR /etc/rabbitmq/
 RUN touch ca_certificate.pem
 
+ARG TEST=$TEST
+
 # Copy the CA certificate content from the environment variable into a file
 RUN echo $TEST > /etc/rabbitmq/ca_certificate.pem
 
