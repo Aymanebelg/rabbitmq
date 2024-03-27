@@ -1,7 +1,7 @@
 FROM rabbitmq:3-management
 
 # Set the working directory
-WORKDIR /etc/rabbitmq/
+WORKDIR /etc/rabbitmq/certs
 
 
 RUN touch /etc/rabbitmq/ca_certificate.pem
