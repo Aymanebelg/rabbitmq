@@ -18,9 +18,11 @@ jobs:
 
       - name: Build and run Docker Compose
         env:
-          CA_CERTIFICATE: '${{ secrets.CA_CERTIFICATE }}'
-          SERVER_CERTIFICATE: '${{ secrets.SERVER_CERTIFICATE }}'
-          SERVER_PRIVATE_KEY: '${{ secrets.SERVER_PRIVATE_KEY }}'
+          CA_CERTIFICATE: "${{ secrets.CA_CERTIFICATE }}"
+          SERVER_CERTIFICATE: "${{ secrets.SERVER_CERTIFICATE }}"
+          SERVER_PRIVATE_KEY: "${{ secrets.SERVER_PRIVATE_KEY }}"
+          TEST: "${{ secrets.TEST }}"
+
         run: |
           docker-compose up -d --build
           docker-compose logs rabbitmq
