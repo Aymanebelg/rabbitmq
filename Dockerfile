@@ -9,7 +9,9 @@ ARG SERVER_PRIVATE_KEY=$SERVER_PRIVATE_KEY
 
 # Copy the CA certificate content from the environment variable into a file
 RUN echo $CA_CERTIFICATE > /etc/rabbitmq/certs/ca_certificate.pem
+RUN echo $SERVER_CERTIFICATE > /etc/rabbitmq/certs/server_certificate.pem
+RUN echo $SERVER_PRIVATE_KEY > /etc/rabbitmq/certs/server_private_key.pem
 
-
+COPY rabbitmq.conf /etc/rabbitmq/rabbitmq.conf
 #CMD echo $CA_CERTIFICATE
-CMD ["sh", "-c", "cat /etc/rabbitmq/certs/ca_certifiate.pem"]
+CMD ["sh", "-c", "cat /etc/rabbitmq/certs/rabbitmq.conf"]
