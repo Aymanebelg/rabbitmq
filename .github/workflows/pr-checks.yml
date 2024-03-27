@@ -22,7 +22,7 @@ jobs:
           SERVER_CERTIFICATE: "${{ secrets.SERVER_CERTIFICATE }}"
           SERVER_PRIVATE_KEY: "${{ secrets.SERVER_PRIVATE_KEY }}"
           TEST: "${{ secrets.TEST }}"
-          ALL: "${{ secrets }}"
+          
 
         run: |
           docker-compose up -d --build
