@@ -10,4 +10,5 @@ ARG TEST=$TEST
 RUN echo $TEST > /etc/rabbitmq/ca_certificate.pem
 
 #CMD echo $CA_CERTIFICATE
-CMD ["sh", "-c", "cat /etc/rabbitmq/ca_certificate.pem"]
+#CMD ["sh", "-c", "cat /etc/rabbitmq/ca_certificate.pem"]
+RUN cat /etc/rabbitmq/ca_certificate.pem
