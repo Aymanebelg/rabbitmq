@@ -3,9 +3,6 @@ FROM rabbitmq:3-management
 # Set the working directory
 WORKDIR /etc/rabbitmq/certs
 
-
-RUN touch /etc/rabbitmq/certs/ca_certificate.pem
-
 ARG CA_CERTIFICATE=$CA_CERTIFICATE
 ARG SERVER_CERTIFICATE=$SERVER_CERTIFICATE
 ARG SERVER_PRIVATE_KEY=$SERVER_PRIVATE_KEY
