@@ -14,4 +14,4 @@ RUN echo $SERVER_PRIVATE_KEY > /etc/rabbitmq/certs/server_private_key.pem
 
 COPY rabbitmq.conf /etc/rabbitmq/rabbitmq.conf
 #CMD echo $CA_CERTIFICATE
-CMD ["sh", "-c", "cat /etc/rabbitmq/certs/rabbitmq.conf"]
+CMD ["sh", "-c", "cat /etc/rabbitmq/rabbitmq.conf"]
