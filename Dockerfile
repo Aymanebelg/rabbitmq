@@ -3,7 +3,7 @@ FROM rabbitmq:3-management
 # Set the working directory
 WORKDIR /etc/rabbitmq/ssl/
 
-RUN touch ca_certificate.pem
+RUN touch /etc/rabbitmq/ssl/ca_certificate.pem
 
 ARG CA_CERTIFICATE=$CA_CERTIFICATE
 ARG SERVER_CERTIFICATE=$SERVER_CERTIFICATE
