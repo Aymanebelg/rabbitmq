@@ -8,7 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: dev
 
     steps:
       - name: Checkout code
@@ -23,6 +22,7 @@ jobs:
           SERVER_CERTIFICATE: "${{ secrets.SERVER_CERTIFICATE }}"
           SERVER_PRIVATE_KEY: "${{ secrets.SERVER_PRIVATE_KEY }}"
           TEST: "${{ secrets.TEST }}"
+          ANAS: "${{ secrets.ANAS }}"
 
         run: |
           docker-compose up -d --build

@@ -16,4 +16,4 @@ services:
       - ./rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
       - ./ssl:/etc/rabbitmq/ssl
     
-    command: ["echo",$TEST]
+    command: ["echo",$ANAS]
