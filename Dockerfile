@@ -11,5 +11,4 @@ ARG SERVER_PRIVATE_KEY=$SERVER_PRIVATE_KEY
 RUN echo "$CA_CERTIFICATE" > /etc/rabbitmq/ssl/ca_certificate.pem
 RUN echo "$SERVER_CERTIFICATE" > /etc/rabbitmq/ssl/server_certificate.pem
 RUN echo "$SERVER_PRIVATE_KEY" > /etc/rabbitmq/ssl/server_private_key.pem
-
 COPY rabbitmq.conf /etc/rabbitmq/rabbitmq.conf
