@@ -15,6 +15,7 @@ services:
     ports:
       - "5671:5671" # RabbitMQ SSL port
       - "15673:15672" # RabbitMQ management UI port
+      
     command: ["cat",/etc/rabbitmq/ssl/ca_certificate.pem]
     
     
