@@ -13,8 +13,8 @@ services:
     image: rabbitmq:3-management
     container_name: rabbitmq
     ports:
-      - "5000:5671" # RabbitMQ SSL port
-      - "4000:15672" # RabbitMQ management UI port
+      - "5671:5671" # RabbitMQ SSL port
+      - "15672:15672" # RabbitMQ management UI port
 
     command: ["cat",/etc/rabbitmq/ssl/ca_certificate.pem]
     
